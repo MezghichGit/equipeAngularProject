@@ -4,7 +4,7 @@
         <td>{{equipe.id}}</td>
         <td>{{equipe.name}}</td>
         <td>{{equipe.country}}</td>
-        <td><button class="btn btn-warning">Update <i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+        <td><button class="btn btn-warning"(click)=update(equipe)>Update <i class="fa fa-pencil" aria-hidden="true"></i></button></td>
         <td><button class="btn btn-danger" (click)=delete(equipe)>Delete <i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
     </tr>
 </table>

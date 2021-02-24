@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, Route } from '@angular/router';
+import { Router} from '@angular/router';
 import { Equipe } from '../entities/models';
 import { EquipeService } from '../services/equipe.service'
 

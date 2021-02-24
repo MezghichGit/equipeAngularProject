@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Equipe } from '../entities/models';
-import { EquipeService } from '../services/equipe.service'
+import { EquipeService } from '../services/equipe.service';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-list-equipes',
@@ -10,7 +11,7 @@ import { EquipeService } from '../services/equipe.service'
 export class ListEquipesComponent implements OnInit {
 
   equipes: Equipe[];
-  constructor(private service : EquipeService) { }
+  constructor(private service : EquipeService, private router:Router) { }
 
   ngOnInit(): void {
     this.refresh();
@@ -34,6 +35,10 @@ export class ListEquipesComponent implements OnInit {
         this.equipes = (<Equipe[]>response);
       }
     );
+  }
+
+  public update(equipe) { 
+    this.router.navigate(["/UpdateEquipe/"+equipe.id +""]);
   }
 
 }
