@@ -13,6 +13,21 @@ export class ListEquipesComponent implements OnInit {
   constructor(private service : EquipeService) { }
 
   ngOnInit(): void {
+    this.refresh();
+  }
+
+  public delete(equipe) {
+    alert("Voulez vous vraiment supprimer : "+ equipe.name);
+
+    this.service.deleteEquipe(equipe.id).subscribe(
+      response => {
+        this.refresh();
+      }
+    );
+
+  }
+  
+  public refresh() { 
     this.service.listEquipes().subscribe(
       response => {
         console.log(response);
