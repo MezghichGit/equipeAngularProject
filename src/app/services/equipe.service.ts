@@ -27,8 +27,8 @@ export class EquipeService {
   }
 
  // méthode pour modifier une équipe
- public updateEquipe(equipe : Equipe) { 
-  return this.http.put(this.baseUrl+'/'+equipe.id, equipe);
+  public updateEquipe(equipe: Equipe) { 
+   return this.http.put(this.baseUrl+'/'+Number(equipe.id), equipe);
  }
 
  // méthode pour supprimer une équipe

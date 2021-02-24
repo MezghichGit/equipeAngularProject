@@ -1,1 +1,22 @@
 <h4>Formulaire de mise à jour d'une équipe</h4>
+
+
+    <div class="form-group">
+      <label for="num">Number</label>
+      <input type="number" class="form-control" id="numm" [(ngModel)]="equipe.id">
+    </div>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" ngModel [(ngModel)]="equipe.name" #valName="ngModel">
+        <div class="alert alert-danger" *ngIf="!valName.value && valName.touched">Name is required</div>
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country</label>
+        <input type="text" class="form-control" id="country" ngModel [(ngModel)]="equipe.country" #valCountry="ngModel">
+        <div class="alert alert-danger" *ngIf="!valCountry.value && valCountry.touched">Country is required</div>
+      </div>
+
+    <button type="submit" class="btn btn-primary" (click)="save()">Submit</button>
+
+
