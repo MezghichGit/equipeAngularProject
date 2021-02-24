@@ -38,13 +38,13 @@ export class UpdateEquipeComponent implements OnInit {
   public save() { 
     //alert("Mise à jour avec succès de l'équipe!");
     console.log(this.equipe);
-    this.service.updateEquipe(this.equipe
+    this.service.updateEquipe(//this.equipe NON à caude de _id de mongo qui est immutable
       
-      /*{
+      {
       id: this.equipe.id,
       name: this.equipe.name,
       country:this.equipe.country
-      }*/
+      }
     
     ).subscribe(
       () => {
