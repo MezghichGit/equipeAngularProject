@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Equipe } from '../entities/models';
+import { EquipeService } from '../services/equipe.service'
 
 @Component({
   selector: 'app-list-equipes',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListEquipesComponent implements OnInit {
 
-  constructor() { }
+  equipes: Equipe[];
+  constructor(private service : EquipeService) { }
 
   ngOnInit(): void {
+    this.service.listEquipes().subscribe(
+      response => {
+        console.log(response);
+        this.equipes = (<Equipe[]>response);
+      }
+    );
   }
 
 }

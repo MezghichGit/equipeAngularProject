@@ -1,1 +1,10 @@
-<p>list-equipes works!</p>
+<table class="table">
+    <tr><th>ID</th><th>Name</th><th>Country</th><th>Update</th><th>Delete</th></tr>
+    <tr *ngFor="let equipe of equipes">
+        <td>{{equipe.id}}</td>
+        <td>{{equipe.name}}</td>
+        <td>{{equipe.country}}</td>
+        <td><button class="btn btn-warning">Update <i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+        <td><button class="btn btn-danger">Delete <i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
+    </tr>
+</table>
