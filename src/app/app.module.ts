@@ -7,7 +7,7 @@ import { AddEquipeComponent } from './add-equipe/add-equipe.component';
 import { UpdateEquipeComponent } from './update-equipe/update-equipe.component';
 import { ListEquipesComponent } from './list-equipes/list-equipes.component';
 import { HttpClientModule}  from '@angular/common/http';
-
+import { FormsModule}  from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +18,8 @@ import { HttpClientModule}  from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
